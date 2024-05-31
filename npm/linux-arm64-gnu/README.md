@@ -1,3 +1,3 @@
-# `farm-plugin-replace-dirname-linux-arm64-gnu`
+# `farm-plugin-nestjs-linux-arm64-gnu`
 
-This is the **aarch64-unknown-linux-gnu** binary for `farm-plugin-replace-dirname`
+This is the **aarch64-unknown-linux-gnu** binary for `farm-plugin-nestjs`

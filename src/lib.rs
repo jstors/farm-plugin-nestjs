@@ -27,17 +27,17 @@ use farmfe_toolkit::{
 use serde;
 
 #[farm_plugin]
-pub struct FarmPluginReplaceDirname {
-  options: ReplaceDirnameOptions,
+pub struct FarmPluginNestJs {
+  options: NestJsOptions,
 }
 
 #[derive(serde::Deserialize)]
-pub struct ReplaceDirnameOptions {
+pub struct NestJsOptions {
   exclude: Vec<ConfigRegex>,
   include: Vec<ConfigRegex>,
 }
 
-impl Default for ReplaceDirnameOptions {
+impl Default for NestJsOptions {
   fn default() -> Self {
     Self {
       exclude: vec![ConfigRegex::new("node_modules/")],
@@ -45,9 +45,9 @@ impl Default for ReplaceDirnameOptions {
     }
   }
 }
-impl FarmPluginReplaceDirname {
+impl FarmPluginNestJs {
   fn new(config: &Config, options: String) -> Self {
-    let options: ReplaceDirnameOptions = serde_json::from_str(&options).unwrap_or_default();
+    let options: NestJsOptions = serde_json::from_str(&options).unwrap_or_default();
     Self { options }
   }
 }
@@ -64,9 +64,9 @@ impl VisitMut for DirnameReplacer {
   }
 }
 
-impl Plugin for FarmPluginReplaceDirname {
+impl Plugin for FarmPluginNestJs {
   fn name(&self) -> &str {
-    "FarmPluginReplaceDirname"
+    "FarmPluginNestJs"
   }
 
   fn process_module(

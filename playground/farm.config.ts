@@ -8,5 +8,5 @@ export default defineConfig({
     progress: false,
     persistentCache: false,
   },
-  plugins: ["farm-plugin-replace-dirname"],
+  plugins: ["farm-plugin-nestjs"],
 });

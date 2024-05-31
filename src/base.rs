@@ -4,7 +4,7 @@ use swc_common::DUMMY_SP;
 use std::env;
 use std::path::Path;
 
-pub fn replace_dirname_with_ast(param: &mut PluginProcessModuleHookParam) {
+pub fn nestjs_with_ast(param: &mut PluginProcessModuleHookParam) {
     let absolute_path = env::current_dir()
         .unwrap()
         .join(param.module_id.relative_path());

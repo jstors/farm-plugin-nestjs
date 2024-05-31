@@ -1,3 +1,3 @@
-# `farm-plugin-replace-dirname-darwin-x64`
+# `farm-plugin-nestjs-darwin-x64`
 
-This is the **x86_64-apple-darwin** binary for `farm-plugin-replace-dirname`
+This is the **x86_64-apple-darwin** binary for `farm-plugin-nestjs`
