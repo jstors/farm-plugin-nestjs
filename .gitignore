@@ -1,0 +1,6 @@
+node_modules
+target
+*.node
+*.farm
+dist
+.DS_Store
